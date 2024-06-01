@@ -21,6 +21,19 @@
         </ul>
     </aside>
     <header>
+        <div class="mobile_menu_icon">
+            <div class="line"></div>
+        </div>
+        <div class="mobile_nav">
+            <ul>
+                <a href="index.html#About">About Me</a>
+                <a href="index.html#EDUCATION">EDUCATION BACKGROUND</a>
+                <a href="index.html#News">News</a>
+                <a href="index.html#CONTACT">CONTACT INFORMATION</a>
+                <a href="index.html#SERVICES">SERVICES</a>
+                <a href="index.html#PROFESSIONAL">PROFESSIONAL SKILLS</a>
+            </ul>
+        </div>
         <div class="top">
             <span class="avatar">
                 <img src="images/avatar.jpg" />
@@ -172,7 +185,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="item" id="CONTACT">
             <h2 class="title">CONTACT
                 INFORMATION</h2>
@@ -208,12 +220,23 @@
                 <li>Deep Learning Tools: PyTorch, TensorFlow, Keras</li>
             </ul>
         </div>
+        <div class="item" id="Publication">
+            <h2 class="title">Publication
+            </h2>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
     </main>
     <script>
         window.onload = function () {
             const nav = document.querySelector('.nav')
             const header = document.querySelector('header')
             const navItems = document.querySelectorAll('.nav ul a')
+            const mobile_menu_icon = document.querySelector('.mobile_menu_icon')
+            const mobile_nav = document.querySelector('.mobile_nav')
+            const mobile_nav_items = mobile_nav.querySelectorAll('a')
+            let flag = 0
             for (let i = 0; i < navItems.length; i++) {
                 navItems[i].addEventListener('click', () => {
                     nav.style.display = 'none'
@@ -222,7 +245,7 @@
             }
 
             window.addEventListener('scroll', () => {
-                if (window.scrollY <= 10) {
+                if (window.scrollY <= 10 && window.innerWidth >= 1130) {
                     nav.style.display = 'flex'
                     nav.style.opacity = '1'
                 } else {
@@ -230,6 +253,26 @@
                 }
                 header.style.backgroundPositionY = `-${window.scrollY / 10}px`
             })
+
+            mobile_menu_icon.addEventListener('click', () => {
+                if (flag == 0) {
+                    flag = 1
+                    mobile_nav.style.display = 'flex'
+                } else {
+                    flag = 0
+                    mobile_nav.style.display = 'none'
+
+                }
+            })
+
+            for (let i = 0; i < mobile_nav_items.length; i++) {
+                mobile_nav_items[i].addEventListener('click', () => {
+                    mobile_nav.style.display = 'none'
+                    flag = 0
+                })
+            }
+
+
         }
     </script>
 </body>
