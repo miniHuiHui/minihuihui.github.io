@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #499ebf;
+  border-bottom: dotted 1px;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  html {
+    font-size: 14px;
+  }
+
+  header {
+    position: relative !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 2rem 6.5rem !important;
+    box-sizing: border-box;
+  }
+
+  header .top {
+    width: 100%;
+    align-items: center !important;
+  }
+
+  header .top p {
+    text-align: center !important;
+  }
+
+  header .bottom {
+    display: none !important;
+  }
+
+  main {
+    margin-left: 0 !important;
+    padding: 4.25rem 1.25rem !important;
+  }
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background-image: url(../images/overlay.png), url(../images/bg.jpg);
+  background-size: auto 150%;
+  background-repeat: repeat no-repeat;
+  background-position: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 6.5rem 4.25rem 3.25rem 0.5625rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+header .top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+header .top h1.name {
+  font-size: 2.3rem;
+  color: #fff;
+  margin-bottom: 0.625rem;
+}
+
+header .top p {
+  text-align: right;
+  max-width: 20rem;
+  color: #ffffff95;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+header .avatar {
+  display: block;
+  width: 11.625rem;
+  height: 11.625rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+header .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .bottom .linkList {
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+header .bottom .linkList a {
+  width: 2.3125rem;
+  height: 2.3125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.25rem;
+  border-bottom: 0;
+}
+
+header .bottom .linkList a svg {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  margin-left: 25%;
+  padding: 7.25rem 7.25rem;
+  box-sizing: border-box;
+}
+
+main .item {
+  margin-bottom: 5.125rem;
+}
+
+main .item .title {
+  display: block;
+  color: #504f4f;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0rem 0 2rem 0;
+}
+
+main .item p,
+main .item ul li {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #a2a2a2;
+  margin-bottom: 0.625rem;
+}
+
+main .item ul li {
+  list-style: circle inside;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+strong {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+  color: #8a8a8a;
+}
+
+main .item.edu > div {
+  margin-bottom: 1.875rem;
+}
+
+main .item.edu > div ul li {
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  background: #2e2e2ea9;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.nav ul a {
+  display: inline-block;
+  color: #fff;
+  border: 0;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul a:hover {
+  color: #ccc;
+}
