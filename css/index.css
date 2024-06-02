@@ -65,6 +65,7 @@ html {
 
   header .bottom {
     align-items: center !important;
+    display: flex !important;
   }
 
   main {
