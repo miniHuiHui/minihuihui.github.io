@@ -252,9 +252,7 @@ main .item .title {
   margin: 0rem 0 2rem 0;
 }
 
-main .item p {
-  color: #4a4a4a;
-}
+main .item p ,
 main .item ul li {
   font-size: 1.125rem;
   line-height: 1.8;
